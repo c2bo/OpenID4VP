@@ -40,6 +40,8 @@ jobs:
           uses: actions/download-artifact@v2
           with:
             name: output
+        - name: Rename to index.html
+          run: mv *.html index.html
         - name: Upload pages artifact
           uses: actions/upload-pages-artifact@v1
           with:
